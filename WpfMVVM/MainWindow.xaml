@@ -20,11 +20,11 @@
         
         <TextBlock Text="Szinek"/>
         <StackPanel Grid.Row="1">
-            <RadioButton Content="Zöld"/>
-            <RadioButton Content="Sárga"/>
-            <RadioButton Content="Lilla"/>
+            <RadioButton IsChecked="True" Command="{Binding GreenViewCommand}" Content="Zöld"/>
+            <RadioButton Command="{Binding YellowViewCommand}" Content="Sárga"/>
+            <RadioButton Command="{Binding LillaViewCommand}" Content="Lilla"/>
             <RadioButton Content="Kilépés"/>
         </StackPanel>
-        <ContentControl Grid.Row="1" Grid.Column="1"/>
+        <ContentControl Content="{Binding CurrentView}" Grid.Row="1" Grid.Column="1"/>
     </Grid>
 </Window>
